@@ -34,7 +34,7 @@ print("\n\nTASK 1: Printing the first 20 samples")
 # Let's change the data_list to remove the header from it.
 data_list = data_list[1:]
 
-for line in data_list[0:19]:
+for line in data_list[:20]:
     print(line)
 
 # We can access the features through index
@@ -46,7 +46,7 @@ input("Press Enter to continue...")
 
 print("\nTASK 2: Printing the genders of the first 20 samples")
 
-for line in data_list[0:19]:
+for line in data_list[:20]:
     print(line[6])
 
 
@@ -57,16 +57,14 @@ input("Press Enter to continue...")
 # TASK 3
 # TODO: Create a function to add the columns(features) of a list in another list in the same order
 def column_to_list(data, index):
-    column_list = set()
+    column_list = []
     # Tip: You can use a for to iterate over the samples, get the feature by index and append into a list
     
     for line in data:
 
         if line[index]:
 
-            column_list.add(line[index])
-
-    column_list = list(column_list)
+            column_list.append(line[index])
 
     return column_list
 
