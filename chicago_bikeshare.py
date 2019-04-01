@@ -80,8 +80,8 @@ input("Press Enter to continue...")
 # Now we know how to access the features, let's count how many Males and Females the dataset have
 # TASK 4
 # TODO: Count each gender. You should not use a function to do that.
-male = 0
-female = 0
+male = column_to_list(data_list, -2).count('Male')
+female = column_to_list(data_list, -2).count('Female')
 
 
 # Checking the result
