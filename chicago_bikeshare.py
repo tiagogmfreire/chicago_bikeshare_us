@@ -61,10 +61,7 @@ def column_to_list(data, index):
     # Tip: You can use a for to iterate over the samples, get the feature by index and append into a list
     
     for line in data:
-
-        if line[index]:
-
-            column_list.append(line[index])
+        column_list.append(line[index])
 
     return column_list
 
