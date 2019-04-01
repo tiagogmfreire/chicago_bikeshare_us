@@ -33,9 +33,8 @@ print("\n\nTASK 1: Printing the first 20 samples")
 
 # Let's change the data_list to remove the header from it.
 data_list = data_list[1:]
-data_20 = data_list[0:19]
 
-for line in data_20:
+for line in data_list[0:19]:
     print(line)
 
 # We can access the features through index
@@ -47,7 +46,7 @@ input("Press Enter to continue...")
 
 print("\nTASK 2: Printing the genders of the first 20 samples")
 
-for line in data_20:
+for line in data_list[0:19]:
     print(line[6])
 
 
