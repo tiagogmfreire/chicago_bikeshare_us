@@ -65,6 +65,16 @@ def column_to_list(data, index):
 
     return column_list
 
+    """
+      Function to turn a "column" from a list into a another list.
+      Args:
+          data: The original list.
+          index: The index from the column to be converted into a separeted list.
+      Returns:
+          The values from the column/index from the original list as separated list
+
+    """
+
 
 # Let's check with the genders if it's working (only the first 20)
 print("\nTASK 3: Printing the list of genders of the first 20 samples")
@@ -102,6 +112,16 @@ def count_gender(data_list):
     female = column_to_list(data_list, -2).count('Female')
     return [male, female]
 
+    """
+      Function count the values for de gender row in the supllied dataset.
+      Args:
+          data_list: The original list.
+          
+      Returns:
+          A list with de the respect gender count values as [Male, Female]
+
+    """
+
 
 print("\nTASK 5: Printing result of count_gender")
 print(count_gender(data_list))
@@ -132,6 +152,15 @@ def most_popular_gender(data_list):
 
     return answer
 
+    """
+      Function to get the most popular gender in the dataset
+      Args:
+          data_list: The original list.
+          
+      Returns:
+          the answer as string: Equal, Male, Female
+
+    """
 
 print("\nTASK 6: Which one is the most popular gender?")
 print("Most popular gender is: ", most_popular_gender(data_list))
@@ -162,6 +191,16 @@ def count_user_type(data_list):
     customer = column_to_list(data_list, -3).count('Customer')
     subscriber = column_to_list(data_list, -3).count('Subscriber')
     return [customer, subscriber]
+
+    """
+      Function to count the user types in the dataset
+      Args:
+          data_list: The original list.
+          
+      Returns:
+          A list with de the respect gender count values as [customer, subscriber]
+
+    """
 
 gender_list = column_to_list(data_list, -3)
 types = ["Customer", "Subscriber"]
