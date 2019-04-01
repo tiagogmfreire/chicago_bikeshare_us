@@ -98,8 +98,8 @@ input("Press Enter to continue...")
 # TODO: Create a function to count the genders. Return a list
 # Should return a list with [count_male, counf_female] (e.g., [10, 15] means 10 Males, 15 Females)
 def count_gender(data_list):
-    male = 0
-    female = 0
+    male = column_to_list(data_list, -2).count('Male')
+    female = column_to_list(data_list, -2).count('Female')
     return [male, female]
 
 
