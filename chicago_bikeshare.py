@@ -231,16 +231,16 @@ assert len(user_types) == 582, "TASK 10: Wrong len of start stations."
 input("Press Enter to continue...")
 # TASK 11
 # Go back and make sure you documented your functions. Explain the input, output and what it do. Example:
-# def new_function(param1: int, param2: str) -> list:
-      #"""
-      #Example function with annotations.
-      #Args:
-      #    param1: The first parameter.
-      #    param2: The second parameter.
-      #Returns:
-      #    List of X values
+def new_function(param1: int, param2: str) -> list:
+      """
+      Example function with annotations.
+      Args:
+          param1: The first parameter.
+          param2: The second parameter.
+      Returns:
+          List of X values
 
-      #"""
+      """
 
 input("Press Enter to continue...")
 # TASK 12 - Challenge! (Optional)
