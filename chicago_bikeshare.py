@@ -4,6 +4,7 @@
 # Here goes the imports
 import csv
 import matplotlib.pyplot as plt
+import itertools
 
 # Let's read the data as a list
 print("Reading the document...")
@@ -32,6 +33,9 @@ print("\n\nTASK 1: Printing the first 20 samples")
 
 # Let's change the data_list to remove the header from it.
 data_list = data_list[1:]
+
+for line in itertools.islice(data_list , 0, 20):
+    print(line)
 
 # We can access the features through index
 # E.g. sample[6] to print gender or sample[-2]
