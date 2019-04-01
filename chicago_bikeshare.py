@@ -181,7 +181,7 @@ input("Press Enter to continue...")
 male, female = count_gender(data_list)
 print("\nTASK 8: Why the following condition is False?")
 print("male + female == len(data_list):", male + female == len(data_list))
-answer = "Type your answer here."
+answer = "The sum of males and females won't match the lenght of the list because there are records with blank gender"
 print("Answer:", answer)
 
 # ------------ DO NOT CHANGE ANY CODE HERE ------------
