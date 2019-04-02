@@ -243,10 +243,36 @@ input("Press Enter to continue...")
 # You should not use ready functions to do that, like max() or min().
 trip_duration_list = column_to_list(data_list, 2)
 
+def my_min(list):
+    """
+      Function to find the minimun value of a list
+      Args:
+          list: The original list.
+          
+      Returns:
+          The minimal value from the list
+    """
+    min = list[0]
+
+    for item in list:
+        if item < min:
+            min = item
+
+    return min
+
+def my_max(list):
+    return 0
+
+def my_mean(list):
+    return 0
+
+def my_median(list):
+    return 0
+
 #casting numbers from str to float
 trip_duration_list = [float(i) for i in trip_duration_list]
 
-min_trip = min(trip_duration_list)
+min_trip = my_min(trip_duration_list)
 max_trip = max(trip_duration_list)
 mean_trip = statistics.mean(trip_duration_list)
 median_trip = statistics.median(trip_duration_list)
