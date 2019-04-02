@@ -299,7 +299,29 @@ def my_mean(list):
     return mean
 
 def my_median(list):
-    return 0
+    """
+      Function to find the median of the values from a list
+      Args:
+          list: The original list.
+          
+      Returns:
+          The median value from the values in the list
+    """
+    
+    list.sort()
+    size = len(list)
+    median = 0
+
+    if size % 2 == 0:
+        right = float(list[size//2])
+        left = float(list[(size//2)-1])
+        median = (right + left) / 2.0
+        median = float(median)
+
+    if size % 2 > 0:
+        median = float(list[size//2])
+
+    return median
 
 #casting numbers from str to float
 trip_duration_list = [float(i) for i in trip_duration_list]
@@ -307,7 +329,7 @@ trip_duration_list = [float(i) for i in trip_duration_list]
 min_trip = my_min(trip_duration_list)
 max_trip = my_max(trip_duration_list)
 mean_trip = my_mean(trip_duration_list)
-median_trip = statistics.median(trip_duration_list)
+median_trip = my_median(trip_duration_list)
 
 
 print("\nTASK 9: Printing the min, max, mean and median")
