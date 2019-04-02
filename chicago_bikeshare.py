@@ -57,14 +57,6 @@ input("Press Enter to continue...")
 # TASK 3
 # TODO: Create a function to add the columns(features) of a list in another list in the same order
 def column_to_list(data, index):
-    column_list = []
-    # Tip: You can use a for to iterate over the samples, get the feature by index and append into a list
-    
-    for line in data:
-        column_list.append(line[index])
-
-    return column_list
-
     """
       Function to turn a "column" from a list into a another list.
       Args:
@@ -74,7 +66,13 @@ def column_to_list(data, index):
           The values from the column/index from the original list as separated list
 
     """
+    column_list = []
+    # Tip: You can use a for to iterate over the samples, get the feature by index and append into a list
+    
+    for line in data:
+        column_list.append(line[index])
 
+    return column_list
 
 # Let's check with the genders if it's working (only the first 20)
 print("\nTASK 3: Printing the list of genders of the first 20 samples")
@@ -108,10 +106,6 @@ input("Press Enter to continue...")
 # TODO: Create a function to count the genders. Return a list
 # Should return a list with [count_male, counf_female] (e.g., [10, 15] means 10 Males, 15 Females)
 def count_gender(data_list):
-    male = column_to_list(data_list, -2).count('Male')
-    female = column_to_list(data_list, -2).count('Female')
-    return [male, female]
-
     """
       Function count the values for de gender row in the supllied dataset.
       Args:
@@ -121,6 +115,9 @@ def count_gender(data_list):
           A list with de the respect gender count values as [Male, Female]
 
     """
+    male = column_to_list(data_list, -2).count('Male')
+    female = column_to_list(data_list, -2).count('Female')
+    return [male, female]
 
 
 print("\nTASK 5: Printing result of count_gender")
@@ -138,6 +135,15 @@ input("Press Enter to continue...")
 # TODO: Create a function to get the most popular gender and print the gender as string.
 # We expect to see "Male", "Female" or "Equal" as answer.
 def most_popular_gender(data_list):
+    """
+      Function to get the most popular gender in the dataset
+      Args:
+          data_list: The original list.
+          
+      Returns:
+          the answer as string: Equal, Male, Female
+
+    """
     answer = ""
 
     male = column_to_list(data_list, -2).count('Male')
@@ -151,16 +157,6 @@ def most_popular_gender(data_list):
         answer = 'Female'
 
     return answer
-
-    """
-      Function to get the most popular gender in the dataset
-      Args:
-          data_list: The original list.
-          
-      Returns:
-          the answer as string: Equal, Male, Female
-
-    """
 
 print("\nTASK 6: Which one is the most popular gender?")
 print("Most popular gender is: ", most_popular_gender(data_list))
@@ -188,10 +184,6 @@ input("Press Enter to continue...")
 print("\nTASK 7: Check the chart!")
 
 def count_user_type(data_list):
-    customer = column_to_list(data_list, -3).count('Customer')
-    subscriber = column_to_list(data_list, -3).count('Subscriber')
-    return [customer, subscriber]
-
     """
       Function to count the user types in the dataset
       Args:
@@ -199,8 +191,10 @@ def count_user_type(data_list):
           
       Returns:
           A list with de the respect gender count values as [customer, subscriber]
-
     """
+    customer = column_to_list(data_list, -3).count('Customer')
+    subscriber = column_to_list(data_list, -3).count('Subscriber')
+    return [customer, subscriber]    
 
 gender_list = column_to_list(data_list, -3)
 types = ["Customer", "Subscriber"]
