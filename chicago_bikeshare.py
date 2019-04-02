@@ -146,8 +146,7 @@ def most_popular_gender(data_list):
     """
     answer = ""
 
-    male = column_to_list(data_list, -2).count('Male')
-    female = column_to_list(data_list, -2).count('Female')
+    male, female = count_gender(data_list)
 
     if male == female:
         answer = 'Equal'
