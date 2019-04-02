@@ -115,8 +115,16 @@ def count_gender(data_list):
           A list with de the respect gender count values as [Male, Female]
 
     """
-    male = column_to_list(data_list, -2).count('Male')
-    female = column_to_list(data_list, -2).count('Female')
+    male = 0
+    female = 0
+    genders = column_to_list(data_list, -2)
+
+    for gender in genders:
+        if gender == 'Male':
+            male+=1
+        elif gender == 'Female':
+            female+=1
+
     return [male, female]
 
 
