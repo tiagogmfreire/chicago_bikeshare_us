@@ -261,7 +261,21 @@ def my_min(list):
     return min
 
 def my_max(list):
-    return 0
+    """
+      Function to find the max value of a list
+      Args:
+          list: The original list.
+          
+      Returns:
+          The max value from the list
+    """
+    max = list[0]
+
+    for item in list:
+        if item > max:
+            max = item
+
+    return max
 
 def my_mean(list):
     return 0
@@ -273,7 +287,7 @@ def my_median(list):
 trip_duration_list = [float(i) for i in trip_duration_list]
 
 min_trip = my_min(trip_duration_list)
-max_trip = max(trip_duration_list)
+max_trip = my_max(trip_duration_list)
 mean_trip = statistics.mean(trip_duration_list)
 median_trip = statistics.median(trip_duration_list)
 
