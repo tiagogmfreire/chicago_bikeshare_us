@@ -199,8 +199,16 @@ def count_user_type(data_list):
       Returns:
           A list with de the respect gender count values as [customer, subscriber]
     """
-    customer = column_to_list(data_list, -3).count('Customer')
-    subscriber = column_to_list(data_list, -3).count('Subscriber')
+    customer = 0
+    subscriber = 0
+    user_types = column_to_list(data_list, -3)
+
+    for user_type in user_types:
+        if user_type == 'Customer':
+            customer+=1
+        elif user_type == 'Subscriber':
+            subscriber+=1
+
     return [customer, subscriber]    
 
 gender_list = column_to_list(data_list, -3)
